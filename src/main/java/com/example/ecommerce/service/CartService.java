@@ -78,4 +78,17 @@ public class CartService {
 
         return repo.save(cart);
     }
+
+    public Cart updateQuantity(String userId, String productId, int quantity) {
+        Cart cart = repo.findByUserId(userId);
+
+        for (CartItem item : cart.getProducts()) {
+            if (item.getProductId().equals(productId)) {
+                item.setQuantity(quantity);
+                break;
+            }
+        }
+
+        return repo.save(cart);
+    }
 }
