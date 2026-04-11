@@ -54,7 +54,7 @@ public class CartController {
         return service.removeFromCart(userId, productId);
     }
 
-    @PutMapping("/cart/update")
+    @PutMapping("/update")
     public Cart updateQuantity(@RequestParam String userId,
                                @RequestParam String productId,
                                @RequestParam int quantity) {

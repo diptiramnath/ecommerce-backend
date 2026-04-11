@@ -47,6 +47,8 @@ public class OrderService {
         order.setStatus("PLACED");
         order.setCreatedAt(LocalDateTime.now().toString());
 
+        order.setPaymentStatus("PENDING");
+
         // 🔥 SAVE TO DB
         Order savedOrder = orderRepository.save(order);
 

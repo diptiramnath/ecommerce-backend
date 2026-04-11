@@ -27,4 +27,6 @@ public class Order {
     private String status;
 
     private String createdAt;
+
+    private String paymentStatus; // PENDING / PAID / FAILED
 }
